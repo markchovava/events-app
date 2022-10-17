@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/home', [HomeController::class, 'index'])->name('frontend.home');
 Route::get('/about', [AboutController::class, 'index'])->name('frontend.about');
 Route::get('/events', [EventController::class, 'index'])->name('frontend.event');
-Route::get('/events/event', [EventController::class, 'view'])->name('frontend.events.view');
+Route::get('/events/event', [EventController::class, 'view'])->name('frontend.event.view');
 Route::get('/contact', [ContactController::class, 'index'])->name('frontend.contact');
 
 

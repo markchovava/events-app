@@ -236,4 +236,4 @@
     </div>
     <!-- Our Blog Area End -->
 
-    @endsection
+@endsection

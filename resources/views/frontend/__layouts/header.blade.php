@@ -31,8 +31,12 @@
                                 <li class="{{ $active == 'Events' ? 'active' : '' }}">
                                     <a href="javascript:;">Events</a>
                                     <ul class="dropdown">
-                                        <li><a href="#">Upcoming Events</a></li>
-                                        <li><a href="#">- Calendar</a></li>   
+                                        <li>
+                                            <a href="{{ route('frontend.event') }}">Upcoming Events</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('frontend.event.view') }}">Single event</a>
+                                        </li>   
                                     </ul>
                                 </li>
                                 <li class="{{ $active == 'Contact' ? 'active' : '' }}">
