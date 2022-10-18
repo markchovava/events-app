@@ -8,11 +8,11 @@
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcrumb-content">
-                        <h2 class="page-title">Blog Gird</h2>
+                        <h2 class="page-title">Events</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                                <li class="breadcrumb-item active" aria-current="page">Events</li>
                             </ol>
                         </nav>
                     </div>
@@ -25,6 +25,15 @@
     <!-- Our Blog Area Start -->
     <div class="our-blog-area section-padding-100">
         <div class="container">
+        <h4>Search</h4>    
+        <div class="row">
+            <!-- Form Group -->
+            <div class="col-md-12 mb-30">
+                <div class="form-group">
+                    <input type="text" class="form-control mb-30" name="name" id="name" placeholder="Event Name" required>
+                </div>
+            </div>
+        </div>
             <div class="row">
                 <!-- Single Blog Area -->
                 <div class="col-12 col-md-6 col-xl-4">

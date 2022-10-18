@@ -29,9 +29,9 @@
 
                             <!-- Contact Area -->
                             <div class="footer-contact-info">
-                                <p><i class="zmdi zmdi-map"></i> 184 Main Collins Street</p>
+                                <p><i class="zmdi zmdi-map"></i> 184 Kuwadzana 6, Holland, Harare</p>
                                 <p><i class="zmdi zmdi-phone"></i> (226) 446 9371</p>
-                                <p><i class="zmdi zmdi-email"></i> confer@gmail.com</p>
+                                <p><i class="zmdi zmdi-email"></i> conference@events.co.zw</p>
                                 <p><i class="zmdi zmdi-globe"></i> www.confer.com</p>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                                 <li><a href="#">OSHA Compliance</a></li>
                                 <li><a href="#">Microsoft Excel Basics</a></li>
                                 <li><a href="#">Forum Speaker Series</a></li>
-                                <li><a href="#">Tedx Moscow Conference</a></li>
+                                <li><a href="{{ route('frontend.client.register') }}">Register as a Client</a></li>
                             </ul>
                         </div>
                     </div>
@@ -63,22 +63,22 @@
                             <div class="footer-gallery">
                                 <div class="row">
                                     <div class="col-4">
-                                        <a href="img/bg-img/21.jpg') }}" class="single-gallery-item"><img src="{{ asset('./__assets/confer/img/bg-img/21.jpg') }}" alt=""></a>
+                                        <a href="{{ asset('./__assets/confer/img/bg-img/21.jpg') }}" class="single-gallery-item"><img src="{{ asset('./__assets/confer/img/bg-img/21.jpg') }}" alt=""></a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="img/bg-img/22.jpg') }}" class="single-gallery-item"><img src="{{ asset('./__assets/confer/img/bg-img/22.jpg') }}" alt=""></a>
+                                        <a href="{{ asset('./__assets/confer/img/bg-img/22.jpg') }}" class="single-gallery-item"><img src="{{ asset('./__assets/confer/img/bg-img/22.jpg') }}" alt=""></a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="img/bg-img/23.jpg') }}" class="single-gallery-item"><img src="{{ asset('./__assets/confer/img/bg-img/23.jpg') }}" alt=""></a>
+                                        <a href="{{ asset('./__assets/confer/img/bg-img/23.jpg') }}" class="single-gallery-item"><img src="{{ asset('./__assets/confer/img/bg-img/23.jpg') }}" alt=""></a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="img/bg-img/24.jpg') }}" class="single-gallery-item"><img src="{{ asset('./__assets/confer/img/bg-img/24.jpg') }}" alt=""></a>
+                                        <a href="{{ asset('./__assets/confer/img/bg-img/24.jpg') }}" class="single-gallery-item"><img src="{{ asset('./__assets/confer/img/bg-img/24.jpg') }}" alt=""></a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="img/bg-img/25.jpg') }}" class="single-gallery-item"><img src="{{ asset('./__assets/confer/img/bg-img/25.jpg') }}" alt=""></a>
+                                        <a href="{{ asset('./__assets/confer/img/bg-img/25.jpg') }}" class="single-gallery-item"><img src="{{ asset('./__assets/confer/img/bg-img/25.jpg') }}" alt=""></a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="img/bg-img/26.jpg') }}" class="single-gallery-item"><img src="{{ asset('./__assets/confer/img/bg-img/26.jpg') }}" alt=""></a>
+                                        <a href="{{ asset('./__assets/confer/img/bg-img/26.jpg') }}" class="single-gallery-item"><img src="{{ asset('./__assets/confer/img/bg-img/26.jpg') }}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -107,8 +107,8 @@
                     <div class="col-12 col-md-6">
                         <div class="footer-menu">
                             <ul class="nav">
-                                <li><a href="#"><i class="zmdi zmdi-circle"></i> Terms of Service</a></li>
-                                <li><a href="#"><i class="zmdi zmdi-circle"></i> Privacy Policy</a></li>
+                                <li><a href="javascript:;"><i class="zmdi zmdi-circle"></i> Terms of Service</a></li>
+                                <li><a href="javascript:;"><i class="zmdi zmdi-circle"></i> Privacy Policy</a></li>
                             </ul>
                         </div>
                     </div>

@@ -44,7 +44,7 @@
                             </ul>
 
                             <!-- Get Tickets Button -->
-                            <a href="javascript:;" class="btn confer-btn mt-3 mt-lg-0 ml-3 ml-lg-5">
+                            <a href="{{ route('frontend.event.register') }}" class="btn confer-btn mt-3 mt-lg-0 ml-3 ml-lg-5">
                                 Register Event <i class="zmdi zmdi-long-arrow-right"></i>
                             </a>
                         </div>

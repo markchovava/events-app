@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Frontend\About\AboutController;
+use App\Http\Controllers\Frontend\Client\ClientController;
 use App\Http\Controllers\Frontend\Contact\ContactController;
 use App\Http\Controllers\Frontend\Event\EventController;
 use App\Http\Controllers\Frontend\Home\HomeController;
@@ -21,7 +22,9 @@ Route::get('/home', [HomeController::class, 'index'])->name('frontend.home');
 Route::get('/about', [AboutController::class, 'index'])->name('frontend.about');
 Route::get('/events', [EventController::class, 'index'])->name('frontend.event');
 Route::get('/events/event', [EventController::class, 'view'])->name('frontend.event.view');
+Route::get('/events/register', [EventController::class, 'register'])->name('frontend.event.register');
 Route::get('/contact', [ContactController::class, 'index'])->name('frontend.contact');
+Route::get('/client/register', [ClientController::class, 'register'])->name('frontend.client.register');
 
 
 

@@ -3,17 +3,18 @@
 @section('frontend.master')
 
     <!-- Breadcrumb Area Start -->
-    <section class="breadcrumb-area bg-img bg-gradient-overlay jarallax" style="background-image: url({{ asset('__assets/confer/img/img/bg-img/37.jpg') }});">
+    <section class="breadcrumb-area bg-img bg-gradient-overlay jarallax" 
+            style="background-image: url({{ asset('__assets/confer/img/img/bg-img/37.jpg') }});">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcrumb-content">
-                        <h2 class="page-title">Blog Details</h2>
+                        <h2 class="page-title">Event Info</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item"><a href="blog.html">Blog Grid</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+                                <li class="breadcrumb-item"><a href="blog.html">Events </a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Event Info</li>
                             </ol>
                         </nav>
                     </div>
@@ -35,7 +36,7 @@
 
                             <!-- Post Thumbnail -->
                             <div class="post-blog-thumbnail mb-30">
-                                <img src="{{ asset('./__assets/confer/img/bg-img/46.jpg') }}" alt="">
+                                <img src="{{ asset('./__assets/images/event/1.jpg') }}" alt="">
                             </div>
 
                             <!-- Post Title -->
@@ -45,8 +46,8 @@
                             <div class="post-meta">
                                 <a class="post-date" href="#"><i class="zmdi zmdi-alarm-check"></i> January 14, 2019</a>
                                 <a class="post-author" href="#"><i class="zmdi zmdi-account"></i> Laura Green</a>
-                                <a class="post-author" href="#"><i class="zmdi zmdi-favorite-outline"></i> 8 Likes</a>
-                                <a class="post-author" href="#"><i class="zmdi zmdi-comment-outline"></i> 12 Comments</a>
+                                <a class="post-author" href="#"><i class="zmdi zmdi-favorite-outline"></i> 8 Attending</a>
+                                <a class="post-author" href="#"><i class="zmdi zmdi-comment-outline"></i> 4 Speakers</a>
                             </div>
 
                             <p>
@@ -64,7 +65,11 @@
                             </p>
                         </div>
 
+                        <!-- Post Title -->
+                        <h4 class="post-title">Speakers</h4>
+
                         <div class="row">
+
                             <!-- Single Speaker Area -->
                             <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
@@ -131,72 +136,6 @@
                                 </div>
                             </div>
 
-                            <!-- Single Speaker Area -->
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
-                                    <!-- Thumb -->
-                                    <div class="speaker-single-thumb">
-                                        <img src="{{ asset('./__assets/confer/img/bg-img/7.jpg') }}" alt="">
-                                    </div>
-                                    <!-- Social Info -->
-                                    <div class="social-info">
-                                        <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-                                    </div>
-                                    <!-- Info -->
-                                    <div class="speaker-info">
-                                        <h5>Evelyn Stone</h5>
-                                        <p>Photographer</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Speaker Area -->
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
-                                    <!-- Thumb -->
-                                    <div class="speaker-single-thumb">
-                                        <img src="{{ asset('./__assets/confer/img/bg-img/8.jpg') }}" alt="">
-                                    </div>
-                                    <!-- Social Info -->
-                                    <div class="social-info">
-                                        <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-                                    </div>
-                                    <!-- Info -->
-                                    <div class="speaker-info">
-                                        <h5>Susan Hopkins</h5>
-                                        <p>UX Manager</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Speaker Area -->
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
-                                    <!-- Thumb -->
-                                    <div class="speaker-single-thumb">
-                                        <img src="{{ asset('./__assets/confer/img/bg-img/9.jpg') }}" alt="">
-                                    </div>
-                                    <!-- Social Info -->
-                                    <div class="social-info">
-                                        <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-                                    </div>
-                                    <!-- Info -->
-                                    <div class="speaker-info">
-                                        <h5>Michael Fowler</h5>
-                                        <p>Product Design</p>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
 
                         <!-- Post Tags & Social Info -->
@@ -220,12 +159,10 @@
                             </div>
                         </div>
 
-                        
-
                        
                         <!-- Leave A Reply -->
                         <div class="confer-leave-a-reply-form clearfix">
-                            <h4 class="mb-30 mt-30">Add info to Book a place</h4>
+                            <h4 class="mb-30 mt-30">Book a place</h4>
                             
                             <!-- Leave A Reply -->
                             <div class="contact_form">
@@ -256,15 +193,9 @@
                                                     <input type="text" class="form-control mb-30" name="subject" id="subject" placeholder="Your Number">
                                                 </div>
                                             </div>
-                                            <!-- Form Group -->
-                                            <div class="col-12">
-                                                <div class="form-group">
-                                                    <textarea name="message" class="form-control mb-30" id="message" cols="30" rows="6" placeholder="Message" required></textarea>
-                                                </div>
-                                            </div>
                                             <!-- Button -->
                                             <div class="col-12">
-                                                <button type="submit" class="btn confer-btn">Send Message <i class="zmdi zmdi-long-arrow-right"></i></button>
+                                                <button type="submit" class="btn confer-btn">Book Now <i class="zmdi zmdi-long-arrow-right"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -390,10 +321,14 @@
 
                         <!-- Single Widget Area -->
                         <div class="single-widget-area">
-                            <h5 class="widget-title mb-30">Tag Cloud</h5>
+                            <h5 class="widget-title mb-30">Tags</h5>
 
                             <!-- Tag Cloud -->
                             <ul class="tag-cloud">
+                                <li><a href="#">Technology</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Conference</a></li>
+                                <li><a href="#">Digital</a></li>
                                 <li><a href="#">Technology</a></li>
                                 <li><a href="#">Business</a></li>
                                 <li><a href="#">Conference</a></li>

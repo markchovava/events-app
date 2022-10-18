@@ -6,7 +6,7 @@
     <section class="welcome-area">
         <div class="welcome-slides owl-carousel">
             <!-- Single Slide -->
-            <div class="single-welcome-slide bg-img bg-overlay jarallax" style="background-image: url(__assets/confer/img/bg-img/1.jpg);">
+            <div class="single-welcome-slide bg-img bg-overlay jarallax" style="background-image: url(__assets/images/bg/president.jpg);">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <!-- Welcome Text -->
@@ -176,7 +176,7 @@
                     <div class="single-blog-area wow fadeInUp" data-wow-delay="300ms">
                         <!-- Single blog Thumb -->
                         <div class="single-blog-thumb">
-                            <img src="{{ asset('./__assets/confer/img/bg-img/18.jpg') }}" alt="">
+                            <img src="{{ asset('./__assets/images/event/president.jpg') }}" alt="">
                         </div>
                         <div class="single-blog-text text-center">
                             <a class="blog-title" href="#">Street Food Convention</a>
@@ -198,7 +198,7 @@
                     <div class="single-blog-area wow fadeInUp" data-wow-delay="300ms">
                         <!-- Single blog Thumb -->
                         <div class="single-blog-thumb">
-                            <img src="{{ asset('./__assets/confer/img/bg-img/19.jpg') }}" alt="">
+                            <img src="{{ asset('./__assets/images/event/table.jpg') }}" alt="">
                         </div>
                         <div class="single-blog-text text-center">
                             <a class="blog-title" href="#">Tedx Moscow Conference</a>
@@ -220,7 +220,7 @@
                     <div class="single-blog-area wow fadeInUp" data-wow-delay="300ms">
                         <!-- Single blog Thumb -->
                         <div class="single-blog-thumb">
-                            <img src="{{ asset('./__assets/confer/img/bg-img/20.jpg') }}" alt="">
+                            <img src="{{ asset('./__assets/images/event/pageant.jpg') }}" alt="">
                         </div>
                         <div class="single-blog-text text-center">
                             <a class="blog-title" href="#">Los Angeles Institute</a>
@@ -242,7 +242,7 @@
                     <div class="single-blog-area wow fadeInUp" data-wow-delay="300ms">
                         <!-- Single blog Thumb -->
                         <div class="single-blog-thumb">
-                            <img src="{{ asset('./__assets/confer/img/bg-img/18.jpg') }}" alt="">
+                            <img src="{{ asset('./__assets/images/event/mic.jpg') }}" alt="">
                         </div>
                         <div class="single-blog-text text-center">
                             <a class="blog-title" href="#">Street Food Convention</a>

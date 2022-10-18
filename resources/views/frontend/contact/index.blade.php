@@ -29,7 +29,7 @@
                 <!-- Contact Us Thumb -->
                 <div class="col-12 col-lg-6">
                     <div class="contact-us-thumb mb-100">
-                        <img src="./__assets/confer/img/bg-img/44.jpg" alt="">
+                        <img src="./__assets/images/event/mic.jpg" alt="">
                     </div>
                 </div>
 
