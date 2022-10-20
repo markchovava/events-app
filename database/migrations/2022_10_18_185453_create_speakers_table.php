@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('speakers', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('event_id')->nullable();
+            $table->string('name')->nullable();
+            $table->string('profession')->nullable();
+            $table->text('topic')->nullable();
             $table->timestamps();
         });
     }

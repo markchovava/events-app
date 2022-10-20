@@ -1,6 +1,6 @@
 @extends('backend.__layouts.master')
 
-@section('backend')
+@section('backend.master')
 
 
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
@@ -81,7 +81,8 @@
                                 <!--begin::Col-->
                                 <div class="col-lg-8">
                                     <!--begin::input-->
-                                    <input type="text" name="name"  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="Role Name..." />
+                                    <input type="text" name="name" required="required" 
+                                        class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="Role Name..." />
                                     <!--end::input-->
                                 </div>
                                 <!--end::Col-->
@@ -99,7 +100,8 @@
                                 <div class="col-lg-8 fv-row d-flex">
                                     <!--begin::Input-->
                                     <select name="level" aria-label="Select an option." data-control="select2" 
-                                        placeholder="Select an option." class="form-select form-select-solid form-select-lg">
+                                        placeholder="Select an option." required="required" 
+                                        class="form-select form-select-solid form-select-lg">
                                         <option value="">Select an option.</option>
                                         <option value="1">First</option>
                                         <option value="2">Second</option>

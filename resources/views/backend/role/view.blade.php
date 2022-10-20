@@ -1,6 +1,6 @@
 @extends('backend.__layouts.master')
 
-@section('backend')
+@section('backend.master')
 
 
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">

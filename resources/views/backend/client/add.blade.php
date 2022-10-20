@@ -11,7 +11,7 @@
             <!--begin::Page title-->
             <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
                 <!--begin::Title-->
-                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">User Account</h1>
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Client Account</h1>
                 <!--end::Title-->
                 <!--begin::Separator-->
                 <span class="h-20px border-gray-300 border-start mx-4"></span>
@@ -29,7 +29,7 @@
                     </li>
                     <!--end::Item-->
                     <!--begin::Item-->
-                    <li class="breadcrumb-item text-muted">User</li>
+                    <li class="breadcrumb-item text-muted">Client</li>
                     <!--end::Item-->
                     <!--begin::Item-->
                     <li class="breadcrumb-item">
@@ -37,7 +37,7 @@
                     </li>
                     <!--end::Item-->
                     <!--begin::Item-->
-                    <li class="breadcrumb-item text-dark">User Info</li>
+                    <li class="breadcrumb-item text-dark">Client Info</li>
                     <!--end::Item-->
                 </ul>
                 <!--end::Breadcrumb-->
@@ -59,7 +59,7 @@
                 <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
                     <!--begin::Card title-->
                     <div class="card-title m-0">
-                        <h3 class="fw-bolder m-0">User Details</h3>
+                        <h3 class="fw-bolder m-0">Client Details</h3>
                     </div>
                     <!--end::Card title-->
                 </div>
@@ -67,7 +67,7 @@
                 <!--begin::Content-->
                 <div id="kt_account_settings_profile_details" class="collapse show">
                     <!--begin::Form-->
-                    <form method="POST" action="{{ route('admin.user.store') }}" enctype="multipart/form-data" class="form">
+                    <form method="POST" action="" enctype="multipart/form-data" class="form">
                         @csrf
                         
                         <!--begin::Card body-->
@@ -75,7 +75,7 @@
                             <!--begin::Input group-->
                             <div class="row mb-6">
                                 <!--begin::Label-->
-                                <label class="col-lg-4 col-form-label fw-bold fs-6"><b>Image</b></label>
+                                <label class="col-lg-4 col-form-label fw-bold fs-6"><b>Avatar</b></label>
                                 <!--end::Label-->
                                 <!--begin::Col-->
                                 <div class="col-lg-8">
@@ -234,8 +234,47 @@
                                 <!--end::Label-->
                                 <!--begin::Col-->
                                 <div class="col-lg-8 fv-row">
-                                    <textarea name="address" class="form-control form-control-lg form-control-solid" placeholder="Address"
-                                    id="" cols="30" rows="4"></textarea>
+                                    <input type="text" name="address" class="form-control form-control-lg form-control-solid" placeholder="Address"/>
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Input group-->
+                            <!--begin::Input group-->
+                            <div class="row mb-6">
+                                <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label fw-bold fs-6"><b>Nationality:</b></label>
+                                <!--end::Label-->
+                                <!--begin::Col-->
+                                <div class="col-lg-8 fv-row">
+                                    <input type="text" name="nationality" class="form-control form-control-lg form-control-solid" 
+                                    placeholder="eg. Zimbabwean etc."/>
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Input group-->
+                            <!--begin::Input group-->
+                            <div class="row mb-6">
+                                <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label fw-bold fs-6"><b>Religion:</b></label>
+                                <!--end::Label-->
+                                <!--begin::Col-->
+                                <div class="col-lg-8 fv-row">
+                                    <input type="text" name="religion" class="form-control form-control-lg form-control-solid" 
+                                    placeholder="eg. Christian etc."/>
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Input group-->
+                            <!--begin::Input group-->
+                             <div class="row mb-6">
+                                <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label fw-bold fs-6">
+                                   <b>Id Number:</b>
+                                </label>
+                                <!--end::Label-->
+                                <!--begin::Col-->
+                                <div class="col-lg-8 fv-row d-flex">
+                                    <input type="text" name="id_number"  class="form-control form-control-lg form-control-solid" placeholder="63-04576 Z 05" />
                                 </div>
                                 <!--end::Col-->
                             </div>

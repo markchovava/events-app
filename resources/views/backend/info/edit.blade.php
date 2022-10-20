@@ -11,7 +11,7 @@
             <!--begin::Page title-->
             <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
                 <!--begin::Title-->
-                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">User Account</h1>
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Site Account</h1>
                 <!--end::Title-->
                 <!--begin::Separator-->
                 <span class="h-20px border-gray-300 border-start mx-4"></span>
@@ -29,7 +29,7 @@
                     </li>
                     <!--end::Item-->
                     <!--begin::Item-->
-                    <li class="breadcrumb-item text-muted">User</li>
+                    <li class="breadcrumb-item text-muted">Site</li>
                     <!--end::Item-->
                     <!--begin::Item-->
                     <li class="breadcrumb-item">
@@ -37,7 +37,7 @@
                     </li>
                     <!--end::Item-->
                     <!--begin::Item-->
-                    <li class="breadcrumb-item text-dark">User Info</li>
+                    <li class="breadcrumb-item text-dark">Site Info</li>
                     <!--end::Item-->
                 </ul>
                 <!--end::Breadcrumb-->
@@ -59,7 +59,7 @@
                 <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
                     <!--begin::Card title-->
                     <div class="card-title m-0">
-                        <h3 class="fw-bolder m-0">User Details</h3>
+                        <h3 class="fw-bolder m-0">Site Details</h3>
                     </div>
                     <!--end::Card title-->
                 </div>
@@ -67,15 +67,15 @@
                 <!--begin::Content-->
                 <div id="kt_account_settings_profile_details" class="collapse show">
                     <!--begin::Form-->
-                    <form method="POST" action="{{ route('admin.user.store') }}" enctype="multipart/form-data" class="form">
+                    @if( isset($info) )
+                    <form method="POST" action="{{ route('admin.info.update', $info->id) }}" enctype="multipart/form-data" class="form">
                         @csrf
-                        
                         <!--begin::Card body-->
                         <div class="card-body border-top p-9">
                             <!--begin::Input group-->
                             <div class="row mb-6">
                                 <!--begin::Label-->
-                                <label class="col-lg-4 col-form-label fw-bold fs-6"><b>Image</b></label>
+                                <label class="col-lg-4 col-form-label fw-bold fs-6"><b>Logo</b></label>
                                 <!--end::Label-->
                                 <!--begin::Col-->
                                 <div class="col-lg-8">
@@ -83,7 +83,7 @@
                                     <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('assets/media/svg/avatars/blank.svg')">
                                         <!--begin::Preview existing avatar-->
                                         <div class="image-input-wrapper w-125px h-125px"
-                                        style="background-image: url({{ url('storage/no_image.jpg') }});" alt=""></div>
+                                        style="background-image: url({{ !empty($info->image) ? url('storage/images/info/logo/' . $info->image) : url('storage/images/no_image.jpg') }});" alt="{{ $info->name }}"></div>
                                         <!--end::Preview existing avatar-->
                                         <!--begin::Label-->
                                         <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
@@ -121,82 +121,9 @@
                                     <b>Full Name:</b></label>
                                 <!--end::Label-->
                                 <!--begin::Col-->
-                                <div class="col-lg-8">
-                                    <!--begin::Row-->
-                                    <div class="row">
-                                        <!--begin::Col-->
-                                        <div class="col-lg-6 fv-row">
-                                            <input type="text" name="first_name"  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="Your First Name...." />
-                                        </div>
-                                        <!--end::Col-->
-                                        <!--begin::Col-->
-                                        <div class="col-lg-6 fv-row">
-                                            <input type="text" name="last_name" class="form-control form-control-lg form-control-solid" placeholder="Your Last Name..." />
-                                        </div>
-                                        <!--end::Col-->
-                                    </div>
-                                    <!--end::Row-->
-                                </div>
-                                <!--end::Col-->
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Input group-->
-                            <div class="row mb-6">
-                                <!--begin::Label-->
-                                <label class="col-lg-4 col-form-label fw-bold fs-6">
-                                    <span class="required"><b>Date of Birth:</b></span>
-                                </label>
-                                <!--end::Label-->
-                                <!--begin::Col-->
-                                <div class="col-lg-2 fv-row d-flex">
-                                    <input type="number" name="day" class="form-control form-control-lg form-control-solid" placeholder="DD" />
-                                </div>
-                                <!--end::Col-->
-                                <!--begin::Col-->
-                                <div class="col-lg-3 fv-row d-flex">
-                                    <!--begin::Input-->
-                                    <select name="month" aria-label="Select a Month..." data-control="select2" 
-                                        placeholder="Select a Month..." class="form-select form-select-solid form-select-lg">
-                                        <option value="">Select an option.</option>
-                                        <option value="January">January</option>
-                                        <option value="February">February</option>
-                                        <option value="March">March</option>
-                                        <option value="April">April</option>
-                                        <option value="May">May</option>
-                                        <option value="June">June</option>
-                                        <option value="July">July</option>
-                                        <option value="August">August</option>
-                                        <option value="September">September</option>
-                                        <option value="October">October</option>
-                                        <option value="November">November</option>
-                                        <option value="December">December</option>
-                                    </select>
-                                    <!--end::Input-->
-                                </div>
-                                <!--end::Col-->
-                                <!--begin::Col-->
-                                <div class="col-lg-3 fv-row d-flex">
-                                    <input type="number" name="year" class="form-control form-control-lg form-control-solid" 
-                                    min="1900" placeholder="2022" />
-                                </div>
-                                <!--end::Col-->
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Input group-->
-                            <div class="row mb-6">
-                                <!--begin::Label-->
-                                <label class="col-lg-4 col-form-label required fw-bold fs-6"><b>Gender:</b></label>
-                                <!--end::Label-->
-                                <!--begin::Col-->
                                 <div class="col-lg-8 fv-row">
-                                    <!--begin::Input-->
-                                    <select name="gender" aria-label="Select a Gender" data-control="select2" 
-                                    data-placeholder="Select a Gender..." class="form-select form-select-solid form-select-lg">
-                                        <option value="">Select a Gender.</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                    </select>
-                                    <!--end::Input-->
+                                    <input type="text" name="name" value="{{ isset($info->name) ? $info->name : ''}}"
+                                    class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="Your First Name...." />
                                 </div>
                                 <!--end::Col-->
                             </div>
@@ -208,7 +135,8 @@
                                 <!--end::Label-->
                                 <!--begin::Col-->
                                 <div class="col-lg-8 fv-row">
-                                    <input type="text" name="phone" class="form-control form-control-lg form-control-solid" 
+                                    <input type="text" name="phone" value="{{ isset($info->phone) ? $info->phone : ''}}"
+                                    class="form-control form-control-lg form-control-solid" 
                                     placeholder="+263 (0) 782 123123" />
                                 </div>
                                 <!--end::Col-->
@@ -221,7 +149,8 @@
                                 <!--end::Label-->
                                 <!--begin::Col-->
                                 <div class="col-lg-8 fv-row">
-                                    <input type="email" name="email" class="form-control form-control-lg form-control-solid" placeholder="abc@example.come" />
+                                    <input type="email" name="email" value="{{ isset($info->email) ? $info->email : ''}}"
+                                    class="form-control form-control-lg form-control-solid" placeholder="abc@example.come" />
                                 </div>
                                 <!--end::Col-->
                             </div>
@@ -234,23 +163,139 @@
                                 <!--end::Label-->
                                 <!--begin::Col-->
                                 <div class="col-lg-8 fv-row">
-                                    <textarea name="address" class="form-control form-control-lg form-control-solid" placeholder="Address"
-                                    id="" cols="30" rows="4"></textarea>
+                                    <textarea name="address" id="" class="form-control form-control-lg form-control-solid" placeholder="Address" 
+                                    cols="30" rows="4">{{ isset($info->address) ? $info->address : ''}}</textarea>
                                 </div>
                                 <!--end::Col-->
                             </div>
                             <!--end::Input group-->
                             
-                           
                         </div>
                         <!--end::Card body-->
-
                         <!--begin::Actions-->
-                        <div class="card-footer d-flex justify-content-end py-6 px-9">
-                           
-                            <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">Add Info</button>
+                        <div class="card-footer d-flex justify-content-end py-6 px-9">            
+                            <button type="submit" class="btn btn-primary">Update Info</button>
                         </div>
                         <!--end::Actions-->
+                    </form>
+                    @else 
+                    <form method="POST" action="{{ route('admin.info.store') }}" enctype="multipart/form-data" class="form">
+                        @csrf
+                        <!--begin::Card body-->
+                        <div class="card-body border-top p-9">
+                            <!--begin::Input group-->
+                            <div class="row mb-6">
+                                <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label fw-bold fs-6"><b>Logo</b></label>
+                                <!--end::Label-->
+                                <!--begin::Col-->
+                                <div class="col-lg-8">
+                                    <!--begin::Image input-->
+                                    <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('assets/media/svg/avatars/blank.svg')">
+                                        <!--begin::Preview existing avatar-->
+                                        <div class="image-input-wrapper w-125px h-125px"
+                                        style="background-image: url({{ url('storage/images/no_image.jpg') }});" alt="Image"></div>
+                                        <!--end::Preview existing avatar-->
+                                        <!--begin::Label-->
+                                        <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+                                            <i class="bi bi-pencil-fill fs-7"></i>
+                                            <!--begin::Inputs-->
+                                            <input type="file" name="image" accept=".png, .jpg, .jpeg" />
+                                            <input type="hidden" name="avatar_remove" />
+                                            <!--end::Inputs-->
+                                        </label>
+                                        <!--end::Label-->
+                                        <!--begin::Cancel-->
+                                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                                            <i class="bi bi-x fs-2"></i>
+                                        </span>
+                                        <!--end::Cancel-->
+                                        <!--begin::Remove-->
+                                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                                            <i class="bi bi-x fs-2"></i>
+                                        </span>
+                                        <!--end::Remove-->
+                                    </div>
+                                    <!--end::Image input-->
+                                    <!--begin::Hint-->
+                                    <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                                    <!--end::Hint-->
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Input group-->
+                            
+                            <!--begin::Input group-->
+                            <div class="row mb-6">
+                                <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label required fw-bold fs-6">
+                                    <b>Full Name:</b></label>
+                                <!--end::Label-->
+                                <!--begin::Col-->
+                                <div class="col-lg-8 fv-row">
+                                    <input type="text" name="name" 
+                                    class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="Company Name...." />
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Input group-->
+                             <!--begin::Input group-->
+                             <div class="row mb-6">
+                                <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label required fw-bold fs-6"><b>Phone Number:</b></label>
+                                <!--end::Label-->
+                                <!--begin::Col-->
+                                <div class="col-lg-8 fv-row">
+                                    <input type="text" name="phone"
+                                    class="form-control form-control-lg form-control-solid" 
+                                    placeholder="+263 (0) 782 123123" />
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Input group-->
+                            <!--begin::Input group-->
+                            <div class="row mb-6">
+                                <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label required fw-bold fs-6"><b>Email:</b></label>
+                                <!--end::Label-->
+                                <!--begin::Col-->
+                                <div class="col-lg-8 fv-row">
+                                    <input type="email" name="email" 
+                                    class="form-control form-control-lg form-control-solid" placeholder="abc@example.come" />
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Input group-->
+                            
+                            <!--begin::Input group-->
+                            <div class="row mb-6">
+                                <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label fw-bold fs-6"><b>Address:</b></label>
+                                <!--end::Label-->
+                                <!--begin::Col-->
+                                <div class="col-lg-8 fv-row">
+                                    <textarea name="address" id="" class="form-control form-control-lg form-control-solid" placeholder="Address" 
+                                    cols="30" rows="4"></textarea>
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Input group-->
+                            
+                        </div>
+                        <!--end::Card body-->
+                        <!--begin::Actions-->
+                        <div class="card-footer d-flex justify-content-end py-6 px-9">        
+                            <button type="submit" class="btn btn-primary">Save Info</button>
+                        </div>
+                        <!--end::Actions-->
+                    </form>
+                    @endif
+
+                        
+                        
+
+                       
+                        
                     </form>
                     <!--end::Form-->
                 </div>

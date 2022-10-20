@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Event\Event;
+use App\Models\Role\Role;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -23,11 +25,26 @@ class User extends Authenticatable
      *
      * @var string[]
      */
+
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name', 'first_name', 'last_name',
+        'gender', 'date_of_birth',
+        'phone', 'email',
+        'password', 'role_id'
     ];
+
+    /**
+     * Relationships
+    **/
+    /* One to Many */
+    
+    public function events(){
+        return $this->hasMany(Event::class, 'user_id', 'id');
+    }
+
+    public function user(){
+        return $this->belongsTo(Role::class, 'role_id', 'id');
+    }
 
     /**
      * The attributes that should be hidden for serialization.

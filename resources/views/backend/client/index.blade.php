@@ -83,7 +83,6 @@
                 <!--end::Card header-->
                 <!--begin::Card body-->
                 <div class="card-body pt-0">
-                    @if(isset($users))
                     <!--begin::Table-->
                     <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_ecommerce_products_table">
                         <!--begin::Table head-->
@@ -105,8 +104,6 @@
                         <!--begin::Table body-->
                         <tbody class="fw-bold text-gray-600">
                             <!--begin::Table row-->
-                            @php( $i = 1)
-                            @foreach($users as $user)
                             <tr>
                                 <!--begin::Checkbox-->
                                 <td>
@@ -174,13 +171,11 @@
                                 </td>
                                 <!--end:: =-->
                             </tr>
-                            @endforeach
                             <!--end::Table row-->
                         </tbody>
                         <!--end::Table body-->
                     </table>
                     <!--end::Table-->
-                    @endif
                 </div>
                 <!--end::Card body-->
             </div>

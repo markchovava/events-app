@@ -1,6 +1,6 @@
 @extends('backend.__layouts.master')
 
-@section('backend')
+@section('backend.master')
 
 
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
@@ -20,7 +20,7 @@
                 <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
                     <!--begin::Item-->
                     <li class="breadcrumb-item text-muted">
-                        <a href="../../demo1/dist/index.html" class="text-muted text-hover-primary">Dashboard</a>
+                        <a href="javascript:;" class="text-muted text-hover-primary">Dashboard</a>
                     </li>
                     <!--end::Item-->
                     <!--begin::Item-->

@@ -84,7 +84,7 @@
                             </span>
                             <div class="menu-sub menu-sub-accordion menu-active-bg">
                                 <div class="menu-item">
-                                    <a class="menu-link" href="#">
+                                    <a class="menu-link" href="{{ route('admin.client') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -92,7 +92,7 @@
                                     </a>
                                 </div>
                                 <div class="menu-item">
-                                    <a class="menu-link" href="#">
+                                    <a class="menu-link" href="{{ route('admin.client.add') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -198,7 +198,7 @@
 
                 <!-- Settings -->
                 <div data-kt-menu-trigger="click" 
-                    class="menu-item menu-accordion {{ $active == 'Settings' || $active == 'Role' || $active == 'Info' ? 'show active' : ''}}">
+                    class="menu-item menu-accordion {{ $active == 'Settings' || $active == 'Roles' || $active == 'Info' ? 'show active' : ''}}">
                     <span class="menu-link">
                         <span class="menu-icon">
                             <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm007.svg-->
@@ -226,7 +226,7 @@
                             </span>
                             <div class="menu-sub menu-sub-accordion menu-active-bg">
                                 <div class="menu-item">
-                                    <a class="menu-link" href="">
+                                    <a class="menu-link" href="{{ route('admin.role') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -234,7 +234,7 @@
                                     </a>
                                 </div>
                                 <div class="menu-item">
-                                    <a class="menu-link" href="">
+                                    <a class="menu-link" href="{{ route('admin.role.add') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -254,7 +254,7 @@
                             </span>
                             <div class="menu-sub menu-sub-accordion menu-active-bg">
                                 <div class="menu-item">
-                                    <a class="menu-link" href="">
+                                    <a class="menu-link" href="{{ route('admin.info.view') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -262,7 +262,7 @@
                                     </a>
                                 </div>
                                 <div class="menu-item">
-                                    <a class="menu-link" href="">
+                                    <a class="menu-link" href="{{ route('admin.info.edit') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
